@@ -1,0 +1,19 @@
+[package]
+name = "xt-laipath"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license = "GPL-3.0-or-later"
+description = "Pure Rust LAI path distribution, ellipsoidal models, and GSL numerical algorithms"
+
+[lib]
+name = "xt_laipath"
+crate-type = ["rlib", "cdylib"]
+
+[features]
+default = []
+python = ["dep:pyo3"]
+
+[dependencies]
+xt-error.workspace = true
+pyo3 = { version = "0.30.1", optional = true, features = ["abi3-py39", "generate-import-lib"] }

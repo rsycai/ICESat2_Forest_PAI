@@ -1,0 +1,80 @@
+[package]
+name = "ICESat2_Forest_PAI"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+xt-config.workspace = true
+tool-download.workspace = true
+tokio.workspace = true
+xt-core.workspace = true
+clap.workspace = true
+tool-pai.workspace = true
+tool-icesat2.workspace = true
+anyhow = "1"
+tempfile = "3"
+
+[workspace]
+resolver = "2"
+members = ["."]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.89"
+license = "MIT"
+
+[workspace.dependencies]
+xt-transfer = { path = "crates/xt-transfer" }
+tool-download = { path = "crates/tool-download" }
+xt-task = { path = "crates/xt-task" }
+xt-icesat2-meta = { path = "crates/tool-download/custom/icesat2" }
+xt-lock = { path = "crates/xt-lock" }
+clap = { version = "=4.6.7", features = ["derive"] }
+xt-manifest = { path = "crates/xt-manifest" }
+tool-pai = { path = "crates/tool-pai" }
+tool-icesat2 = { path = "crates/tool-icesat2" }
+hdf5-pure = { version = "=0.47.0", default-features = false, features = ["std", "checksum", "deflate"] }
+hdf5-writer = "=0.12.1"
+hdf5-reader = { version = "=0.12.1", default-features = false }
+xt-laipath = { path = "crates/xt-laipath" }
+xt-core = { path = "crates/xt-core" }
+xt-config = { path = "crates/xt-config" }
+xt-error = { path = "crates/xt-error" }
+xt-macros = { path = "crates/xt-macros" }
+tracing = "0.1"
+tracing-appender = "0.2"
+chrono = { version = "0.4", default-features = false, features = ["clock"] }
+chrono-tz = "0.10"
+config = { version = "0.15", default-features = false, features = ["toml", "json", "yaml", "ini", "ron", "json5"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+inventory = "0.3"
+quick-xml = { version = "0.38", features = ["serialize"] }
+reqwest = { version = "0.13.2", default-features = false, features = ["rustls-no-provider", "cookies", "stream", "query", "socks"] }
+base64 = "0.23.1"
+netrc = { package = "rust-netrc", version = "=0.1.2" }
+http = "1"
+url = "2"
+hya-core = "=0.5.1"
+hya-net = "=0.6.3"
+rustls = { version = "0.23", default-features = false, features = ["ring", "std", "tls12"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "fs", "io-util", "time", "sync", "signal", "net"] }
+tokio-util = { version = "0.7", features = ["rt"] }
+sha2 = "0.10"
+sha1 = "0.10"
+md-5 = "0.10"
+hex = "0.4"
+httpdate = "1"
+fs2 = "0.4"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+time = { version = "=0.3.44", features = ["formatting", "parsing", "macros"] }
+
+[profile.release]
+lto = "thin"
+strip = true
+codegen-units = 1
+
+
+
+

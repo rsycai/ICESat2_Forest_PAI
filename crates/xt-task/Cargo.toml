@@ -1,0 +1,9 @@
+[package]
+name = "xt-task"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+[dependencies]
+xt-error.workspace = true
+tokio-util.workspace = true

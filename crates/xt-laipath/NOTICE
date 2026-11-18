@@ -1,0 +1,9 @@
+xt-laipath 的 Rust 实现迁移自用户提供的 E:/Code/lai-path。
+数值积分、求根和误差处理算法源自 GNU Scientific Library（GSL）。
+审查对照版本：GNU GSL 2.8。
+上游源代码：https://ftp.gnu.org/gnu/gsl/gsl-2.8.tar.gz
+
+对应文件的完整上游版权声明保存在 GSL-COPYRIGHTS.txt。
+本 crate 保留 GNU GPL 第 3 版或更新版本的许可，完整正文见 COPYING。
+迁移中修正了误差估计、积分排序及返回分支、Brent 交换条件、
+求根状态内存管理、直方图边界和 LAI 错误传播，并去除了 Python 绑定。

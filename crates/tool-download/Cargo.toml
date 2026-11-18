@@ -1,0 +1,32 @@
+[package]
+build = "build/main.rs"
+name = "tool-download"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+xt-task.workspace = true
+xt-icesat2-meta.workspace = true
+inventory.workspace = true
+tracing.workspace = true
+clap.workspace = true
+xt-manifest.workspace = true
+xt-config.workspace = true
+xt-error.workspace = true
+xt-transfer.workspace = true
+hya-net.workspace = true
+chrono.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+quick-xml.workspace = true
+reqwest.workspace = true
+tokio.workspace = true
+tokio-util.workspace = true
+
+[build-dependencies]
+quick-xml.workspace = true
+
+[dev-dependencies]
+xt-core.workspace = true

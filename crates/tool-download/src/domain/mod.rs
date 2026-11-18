@@ -1,0 +1,31 @@
+
+pub use crate::services::transport::HttpRequest as CatalogRequest;
+pub use crate::services::transport::HttpResponse as CatalogResponse;
+pub use xt_transfer::Asset;
+pub use xt_transfer::Checksum;
+pub use xt_transfer::DownloadOptions;
+pub use xt_transfer::DownloadOutcome;
+pub use xt_transfer::DownloadTask;
+pub use xt_transfer::ExistingFilePolicy;
+
+mod adapter;
+mod discovery;
+mod error;
+mod query;
+mod run_options;
+mod spatial;
+mod time_range;
+pub use adapter::PipelineSource;
+pub use adapter::SourceAdapter;
+pub use adapter::SourceContext;
+pub use discovery::DataGroup;
+pub use discovery::DiscoveryResult;
+pub use discovery::GroupIdentity;
+pub(crate) use error::invalid;
+pub use query::Granule;
+pub use query::PageToken;
+pub use query::SearchPage;
+pub use query::SearchQuery;
+pub use run_options::RunOptions;
+pub use spatial::{BoundingBox, DownloadRange, ShapefileCrs};
+pub use time_range::TimeRange;

@@ -1,0 +1,16 @@
+/target/
+/data/
+/products/
+/logs/
+*.h5
+*.tif
+*.part
+.env
+__pycache__/
+
+/dist/
+
+# Small distributable fixtures are tracked; generated test products are not.
+!tests/data/*.h5
+!tests/data/*.tif
+/tests/output/

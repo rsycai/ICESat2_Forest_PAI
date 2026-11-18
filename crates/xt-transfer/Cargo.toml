@@ -1,0 +1,23 @@
+[package]
+name = "xt-transfer"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+base64.workspace = true
+netrc.workspace = true
+hya-core.workspace = true
+hya-net.workspace = true
+rustls.workspace = true
+xt-lock.workspace = true
+xt-error.workspace = true
+http.workspace = true
+url.workspace = true
+tokio.workspace = true
+tokio-util.workspace = true
+sha2.workspace = true
+sha1.workspace = true
+md-5.workspace = true
+hex.workspace = true

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<download>
+    
+    <authentication>
+    <profile id="earthdata" adapter="nasa.earthdata">
+      <parameters>
+        <parameter name="token_env" value="EARTHDATA_TOKEN" public="true"/>
+        <parameter name="token" value=""/>
+      </parameters>
+    </profile>
+  </authentication>
+    <source id="icesat2">
+    <authentication>earthdata</authentication>
+        <search_url>https://cmr.earthdata.nasa.gov/search/granules.json</search_url>
+        <product_prefix>ATL</product_prefix>
+        <default_product>ATL03</default_product>
+        <products>
+            <product name="ATL03" version="007" />
+            <product name="ATL08" version="007" />
+        </products>
+        <parameters>
+            <parameter name="downloadable" value="true" />
+        </parameters>
+    </source>
+</download>
+

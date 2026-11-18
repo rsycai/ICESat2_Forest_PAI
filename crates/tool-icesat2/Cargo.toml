@@ -1,0 +1,24 @@
+[package]
+name = "tool-icesat2"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+sha2.workspace = true
+xt-task.workspace = true
+xt-lock.workspace = true
+xt-icesat2-meta.workspace = true
+tracing.workspace = true
+clap.workspace = true
+xt-manifest.workspace = true
+xt-config.workspace = true
+xt-error.workspace = true
+chrono.workspace = true
+hdf5-pure.workspace = true
+hdf5-writer.workspace = true
+hdf5-reader.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+tempfile = "3"

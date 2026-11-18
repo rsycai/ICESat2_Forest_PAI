@@ -1,0 +1,100 @@
+#![allow(clippy::excessive_precision)]
+pub const GSL_SUCCESS: i32 = 0;
+pub const GSL_EROUND: i32 = 18; /* failed because of roundoff error */
+pub const GSL_EMAXITER: i32 = 11; /* exceeded max number of iterations */
+pub const GSL_FAILURE: i32 = -1;
+pub const GSL_CONTINUE: i32 = -2; /* iteration has not converged */
+pub const GSL_EDOM: i32 = 1; /* input domain error, e.g sqrt(-1) */
+pub const GSL_ERANGE: i32 = 2; /* output range error, e.g. exp(1e100) */
+pub const GSL_EFAULT: i32 = 3; /* invalid pointer */
+pub const GSL_EINVAL: i32 = 4; /* invalid argument supplied by user */
+pub const GSL_EFAILED: i32 = 5; /* generic failure */
+pub const GSL_EFACTOR: i32 = 6; /* factorization failed */
+pub const GSL_ESANITY: i32 = 7; /* sanity check failed - shouldn't happen */
+pub const GSL_ENOMEM: i32 = 8; /* malloc failed */
+pub const GSL_EBADFUNC: i32 = 9; /* problem with user-supplied function */
+pub const GSL_ERUNAWAY: i32 = 10; /* iterative process is out of control */
+pub const GSL_EZERODIV: i32 = 12; /* tried to divide by zero */
+pub const GSL_EBADTOL: i32 = 13; /* user specified an invalid tolerance */
+pub const GSL_ETOL: i32 = 14; /* failed to reach the specified tolerance */
+pub const GSL_EUNDRFLW: i32 = 15; /* underflow */
+pub const GSL_EOVRFLW: i32 = 16; /* overflow */
+pub const GSL_ELOSS: i32 = 17; /* loss of accuracy */
+pub const GSL_EBADLEN: i32 = 19; /* matrix, vector lengths are not conformant */
+pub const GSL_ENOTSQR: i32 = 20; /* matrix not square */
+pub const GSL_ESING: i32 = 21; /* apparent singularity detected */
+pub const GSL_EDIVERGE: i32 = 22; /* integral or series is divergent */
+pub const GSL_EUNSUP: i32 = 23; /* requested feature is not supported by the hardware */
+pub const GSL_EUNIMPL: i32 = 24; /* requested feature not (yet) implemented */
+pub const GSL_ECACHE: i32 = 25; /* cache limit exceeded */
+pub const GSL_ETABLE: i32 = 26; /* table limit exceeded */
+pub const GSL_ENOPROG: i32 = 27; /* iteration is not making progress towards solution */
+pub const GSL_ENOPROGJ: i32 = 28; /* jacobian evaluations are not improving the solution */
+pub const GSL_ETOLF: i32 = 29; /* cannot reach the specified tolerance in F */
+pub const GSL_ETOLX: i32 = 30; /* cannot reach the specified tolerance in X */
+pub const GSL_ETOLG: i32 = 31; /* cannot reach the specified tolerance in gradient */
+pub const GSL_EOF: i32 = 32; /* end of file */
+pub const GSL_DBL_EPSILON: f64 = 2.2204460492503131e-16;
+pub const GSL_SQRT_DBL_EPSILON: f64 = 1.4901161193847656e-08;
+pub const GSL_ROOT3_DBL_EPSILON: f64 = 6.0554544523933429e-06;
+pub const GSL_ROOT4_DBL_EPSILON: f64 = 1.2207031250000000e-04;
+pub const GSL_ROOT5_DBL_EPSILON: f64 = 7.4009597974140505e-04;
+pub const GSL_ROOT6_DBL_EPSILON: f64 = 2.4607833005759251e-03;
+pub const GSL_LOG_DBL_EPSILON: f64 = -3.6043653389117154e+01;
+
+pub const GSL_DBL_MIN: f64 = 2.2250738585072014e-308;
+pub const GSL_SQRT_DBL_MIN: f64 = 1.4916681462400413e-154;
+pub const GSL_ROOT3_DBL_MIN: f64 = 2.8126442852362996e-103;
+pub const GSL_ROOT4_DBL_MIN: f64 = 1.2213386697554620e-77;
+pub const GSL_ROOT5_DBL_MIN: f64 = 2.9476022969691763e-62;
+pub const GSL_ROOT6_DBL_MIN: f64 = 5.3034368905798218e-52;
+pub const GSL_LOG_DBL_MIN: f64 = -7.0839641853226408e+02;
+
+pub const GSL_DBL_MAX: f64 = 1.7976931348623157e+308;
+pub const GSL_SQRT_DBL_MAX: f64 = 1.3407807929942596e+154;
+pub const GSL_ROOT3_DBL_MAX: f64 = 5.6438030941222897e+102;
+pub const GSL_ROOT4_DBL_MAX: f64 = 1.1579208923731620e+77;
+pub const GSL_ROOT5_DBL_MAX: f64 = 4.4765466227572707e+61;
+pub const GSL_ROOT6_DBL_MAX: f64 = 2.3756689782295612e+51;
+pub const GSL_LOG_DBL_MAX: f64 = 7.0978271289338397e+02;
+
+pub const GSL_FLT_EPSILON: f32 = 1.1920928955078125e-07;
+pub const GSL_SQRT_FLT_EPSILON: f32 = 3.4526698300124393e-04;
+pub const GSL_ROOT3_FLT_EPSILON: f32 = 4.9215666011518501e-03;
+pub const GSL_ROOT4_FLT_EPSILON: f32 = 1.8581361171917516e-02;
+pub const GSL_ROOT5_FLT_EPSILON: f32 = 4.1234622211652937e-02;
+pub const GSL_ROOT6_FLT_EPSILON: f32 = 7.0153878019335827e-02;
+pub const GSL_LOG_FLT_EPSILON: f32 = -1.5942385152878742e+01;
+
+pub const GSL_FLT_MIN: f32 = 1.1754943508222875e-38;
+pub const GSL_SQRT_FLT_MIN: f32 = 1.0842021724855044e-19;
+pub const GSL_ROOT3_FLT_MIN: f32 = 2.2737367544323241e-13;
+pub const GSL_ROOT4_FLT_MIN: f32 = 3.2927225399135965e-10;
+pub const GSL_ROOT5_FLT_MIN: f32 = 2.5944428542140822e-08;
+pub const GSL_ROOT6_FLT_MIN: f32 = 4.7683715820312542e-07;
+pub const GSL_LOG_FLT_MIN: f32 = -8.7336544750553102e+01;
+
+pub const GSL_FLT_MAX: f32 = 3.4028234663852886e+38;
+pub const GSL_SQRT_FLT_MAX: f32 = 1.8446743523953730e+19;
+pub const GSL_ROOT3_FLT_MAX: f32 = 6.9814635196223242e+12;
+pub const GSL_ROOT4_FLT_MAX: f32 = 4.2949672319999986e+09;
+pub const GSL_ROOT5_FLT_MAX: f32 = 5.0859007855960041e+07;
+pub const GSL_ROOT6_FLT_MAX: f32 = 2.6422459233807749e+06;
+pub const GSL_LOG_FLT_MAX: f32 = 8.8722839052068352e+01;
+
+pub const GSL_SFLT_EPSILON: f32 = 4.8828125000000000e-04;
+pub const GSL_SQRT_SFLT_EPSILON: f32 = 2.2097086912079612e-02;
+pub const GSL_ROOT3_SFLT_EPSILON: f32 = 7.8745065618429588e-02;
+pub const GSL_ROOT4_SFLT_EPSILON: f32 = 1.4865088937534013e-01;
+pub const GSL_ROOT5_SFLT_EPSILON: f32 = 2.1763764082403100e-01;
+pub const GSL_ROOT6_SFLT_EPSILON: f32 = 2.8061551207734325e-01;
+pub const GSL_LOG_SFLT_EPSILON: f32 = -7.6246189861593985e+00;
+
+pub const GSL_MACH_EPS: f64 = GSL_DBL_EPSILON;
+
+pub const GSL_SQRT_MACH_EPS: f64 = 3.2e-08;
+pub const GSL_ROOT3_MACH_EPS: f64 = 1.0e-05;
+pub const GSL_ROOT4_MACH_EPS: f64 = 0.000178;
+pub const GSL_ROOT5_MACH_EPS: f64 = 0.00100;
+pub const GSL_ROOT6_MACH_EPS: f64 = 0.00316;
+pub const GSL_LOG_MACH_EPS: f64 = -34.54;

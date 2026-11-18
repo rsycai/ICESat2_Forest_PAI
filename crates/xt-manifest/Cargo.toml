@@ -1,0 +1,19 @@
+[package]
+name = "xt-manifest"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+xt-core.workspace = true
+xt-error.workspace = true
+serde.workspace = true
+quick-xml.workspace = true
+chrono.workspace = true
+xt-lock.workspace = true
+tempfile = "3"
+
+[dev-dependencies]
+clap.workspace = true
+tracing.workspace = true

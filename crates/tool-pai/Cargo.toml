@@ -1,0 +1,27 @@
+[package]
+name = "tool-pai"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+sha2.workspace = true
+tracing.workspace = true
+xt-core.workspace = true
+xt-config.workspace = true
+xt-manifest.workspace = true
+xt-lock.workspace = true
+chrono.workspace = true
+serde.workspace = true
+clap.workspace = true
+xt-laipath.workspace = true
+hdf5-pure.workspace = true
+bincode = "=2.0.1"
+brotli-decompressor = "=5.0.0"
+tempfile = "3"
+anyhow = "1"
+
+[dev-dependencies]
+las = { version = "0.9", features = ["laz"] }
+quick-xml.workspace = true
+csv = "1"

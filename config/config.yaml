@@ -1,0 +1,68 @@
+# Precedence: command-line options > environment variables > YAML > built-in defaults.
+# Relative paths are resolved from the process working directory.
+logging:
+  # Directory for daily log files.
+  directory: logs
+  # Filename prefix shared by the executables.
+  prefix: PAI
+  # Also write logs to stderr.
+  console: true
+  # tracing filter expression, e.g. info or tool_download=debug.
+  filter: info
+  # Retention in days, including today; allowed range: 1-30.
+  retention_days: 30
+  # IANA timezone for timestamps and daily rotation.
+  timezone: Asia/Shanghai
+
+paths:
+  # Storage root; workflow.py overrides it with --directory (default: current directory).
+  root: .
+  # Distinct single-component subdirectory names for each data product.
+  downloads: downloads
+  processed: processed
+  products: products
+  manifests: manifests
+
+download:
+  # CMR records per page; allowed range: 1-2000.
+  page_size: 100
+  # Enable periodic byte progress; completion and failure logs remain enabled.
+  progress: false
+  # Number of simultaneous file downloads; allowed range: 1-64.
+  concurrency: 4
+  # Maximum parallel chunks per file; allowed range: 1-64.
+  workers: 4
+  # Multipart transfers require a larger file and server Range support (bytes).
+  multipart_threshold_bytes: 1000000000
+  # Additional search/authentication retries; allowed range: 0-20.
+  request_retries: 3
+  # Connection/probe/stall timeout in seconds, not total download duration (1-86400).
+  timeout_seconds: 60
+  # Maximum search/authentication retry delay in seconds (0-86400).
+  request_max_retry_delay_seconds: 120
+  # Resume incomplete files when remote identity checks permit it.
+  resume: true
+  # Existing-file policy: skip, fail, or overwrite.
+  existing: skip
+  # Empty uses system proxy environment variables; --no-proxy disables proxies.
+  proxy: ""
+  # Per-file limit in bytes/second; 0 means unlimited.
+  speed_limit: 0
+
+icesat2:
+  # Maximum ATL03 photon rows read per window; allowed range: 1-1048576.
+  read_window_rows: 65536
+  # Allow replacement of existing matched results; raw inputs are retained.
+  overwrite: false
+
+pai:
+  # Compatibility field only: this project always uses G(0)=0.5 without a raster.
+  g0_raster: ""
+  # MODIS IGBP landcover GeoTIFF. CLI --landcover overrides this path.
+  # A {year} placeholder is supported by the internal configuration loader.
+  landcover: "tests/data/landcover.tif"
+  # Retained IGBP classes: evergreen/deciduous needleleaf/broadleaf and mixed forest.
+  landcover_classes: [1, 2, 3, 4, 5]
+  # Inclusive retained QA interval; require 0 <= qa_min <= qa_max <= 9.
+  qa_min: 0
+  qa_max: 5

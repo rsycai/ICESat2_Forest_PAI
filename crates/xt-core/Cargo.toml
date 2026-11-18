@@ -1,0 +1,23 @@
+[package]
+name = "xt-core"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+geotiff-reader = { version = "=0.11.1", default-features = false, features = ["local"] }
+tiff-reader = { version = "=0.11.1", default-features = false }
+proj4rs = { version = "=0.1.5", features = ["crs-definitions"] }
+xt-config.workspace = true
+xt-error.workspace = true
+tracing.workspace = true
+tracing-appender.workspace = true
+tracing-subscriber.workspace = true
+time.workspace = true
+chrono.workspace = true
+chrono-tz.workspace = true
+
+[dev-dependencies]
+tempfile = "3"
+tokio.workspace = true

@@ -1,0 +1,41 @@
+[build-system]
+requires = ["maturin>=1.16,<2"]
+build-backend = "maturin"
+
+[project]
+name = "xt-laipath"
+dynamic = ["version"]
+description = "Rust implementation of LAI path distribution, ellipsoidal models, and geographic distances"
+readme = "PYTHON.md"
+requires-python = ">=3.9"
+license = "GPL-3.0-or-later"
+license-files = ["COPYING", "NOTICE", "GSL-COPYRIGHTS.txt"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: Scientific/Engineering",
+    "Typing :: Typed",
+]
+
+[tool.maturin]
+features = ["python"]
+python-source = "python"
+module-name = "xt_laipath._native"
+bindings = "pyo3"
+exclude = ["**/__pycache__/**", "**/*.pyc"]
+include = [
+    { path = "tests/**", format = "sdist" },
+    { path = "python/tests/**", format = "sdist" },
+]

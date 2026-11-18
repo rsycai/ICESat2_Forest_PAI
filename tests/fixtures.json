@@ -1,0 +1,38 @@
+{
+  "source_granules": [
+    "ATL03_20200101235632_00960601_007_01.h5",
+    "ATL08_20200101235632_00960601_007_01.h5"
+  ],
+  "beam": "gt1l",
+  "land_segments": 3,
+  "segment_id_range": [
+    58359,
+    58393
+  ],
+  "atl03_photons": 289,
+  "atl08_classified_photons": 284,
+  "landcover_source": "MCD12Q1_006_2020_01_01-LC_Type1_4326.tif",
+  "files": {
+    "ATL03_20200101235632_00960601_007_01.h5": {
+      "bytes": 33953,
+      "sha256": "f1b5c4b46669f01fc97305a90fa33aa0e8b45b062703727ca443c7b05c879d8c"
+    },
+    "ATL08_20200101235632_00960601_007_01.h5": {
+      "bytes": 57248,
+      "sha256": "691858e377a60ab4546841ec028209272f2cc68b74d7901311cd0fc76a7d80fe"
+    },
+    "landcover.tif": {
+      "bytes": 65888,
+      "sha256": "359129879513c0a3bc78d79c0e019ed165f00d5d74a3ca103bdabf13276ed652"
+    }
+  },
+  "expected_final_rows": [
+    {
+      "beam": "gt1l",
+      "segment_id_beg": 58359,
+      "PAI": 3.528987407684326,
+      "PAIe": 1.7149004936218262
+    }
+  ],
+  "all_output_columns_match_full_granule": true
+}
