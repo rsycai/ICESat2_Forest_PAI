@@ -1,9 +1,13 @@
-xt-laipath 的 Rust 实现迁移自用户提供的 E:/Code/lai-path。
-数值积分、求根和误差处理算法源自 GNU Scientific Library（GSL）。
-审查对照版本：GNU GSL 2.8。
-上游源代码：https://ftp.gnu.org/gnu/gsl/gsl-2.8.tar.gz
+xt-laipath is a Rust port of the lai-path implementation supplied for this project.
+Numerical integration, root-finding, and error-handling algorithms are derived
+from the GNU Scientific Library (GSL). Reviewed upstream version: GSL 2.8.
+Upstream source: https://ftp.gnu.org/gnu/gsl/gsl-2.8.tar.gz
 
-对应文件的完整上游版权声明保存在 GSL-COPYRIGHTS.txt。
-本 crate 保留 GNU GPL 第 3 版或更新版本的许可，完整正文见 COPYING。
-迁移中修正了误差估计、积分排序及返回分支、Brent 交换条件、
-求根状态内存管理、直方图边界和 LAI 错误传播，并去除了 Python 绑定。
+Complete upstream copyright notices are retained in GSL-COPYRIGHTS.txt.
+This crate is licensed under GNU GPL version 3 or, at your option, any later
+version. The complete license text is provided in COPYING.
+
+Porting changes include corrections to error estimates, integration ordering
+and return branches, Brent swap conditions, root-solver state management,
+histogram boundaries, and LAI error propagation. Optional Python bindings
+are maintained separately from the default Rust interface.

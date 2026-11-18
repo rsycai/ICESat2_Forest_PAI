@@ -59,4 +59,15 @@ The workflow loads the bundled YAML regardless of the working directory. Use `--
 
 ## Validation and publication
 
-Release packaging, NASA download, automatic pairing, and final-product generation have been tested on one real ATL03/ATL08 pair (2020-01-01). The product contains 269 rows across six beams and matches the local-input run dataset for dataset. Broader scientific validation remains pending. The project includes GPL-3.0-or-later code from xt-laipath; finalize distribution licensing, attribution, and the paper citation before publication. Do not commit credentials or downloaded datasets.
+Release packaging, NASA download, automatic pairing, and final-product generation have been tested on one real ATL03/ATL08 pair (2020-01-01). The product contains 269 rows across six beams and matches the local-input run dataset for dataset. Broader scientific validation remains pending. Add the paper citation and author information before publication. Do not commit credentials or downloaded datasets.
+
+
+## License
+
+ICESat2_Forest_PAI is free software licensed under the **GNU General Public License, version 3 or any later version** (`GPL-3.0-or-later`). See [LICENSE](LICENSE) for the complete license text and [NOTICE](NOTICE) for third-party attribution.
+
+You may use, study, modify, and redistribute the software, including for commercial purposes, subject to the GPL terms. When distributing covered software or modified versions, retain the required notices, license the covered work under the applicable GPL terms, and provide the corresponding source as required by the license. The software is provided without warranty.
+
+The `xt-laipath` numerical implementation includes algorithms derived from GNU GSL. Its original copyright notices and license are retained in [crates/xt-laipath/GSL-COPYRIGHTS.txt](crates/xt-laipath/GSL-COPYRIGHTS.txt), [NOTICE](crates/xt-laipath/NOTICE), and [COPYING](crates/xt-laipath/COPYING). Runtime packages include these notices under `licenses/xt-laipath/`. Other dependencies retain their respective licenses.
+
+The software license does not change the terms applicable to NASA ATL03/ATL08 or MODIS landcover data, including the cropped fixtures in `tests/data`. Using this program for research does not, by itself, require the resulting paper to be licensed under the GPL. Scientific citation is encouraged and is not an additional condition of the software license.

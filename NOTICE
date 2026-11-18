@@ -1,0 +1,22 @@
+ICESat2_Forest_PAI
+
+This project is distributed under the GNU General Public License, version 3
+or, at your option, any later version (SPDX: GPL-3.0-or-later).
+The complete GNU GPL version 3 text is provided in LICENSE.
+
+Third-party numerical code
+--------------------------
+The xt-laipath Rust implementation includes numerical integration,
+root-finding, and error-handling algorithms derived from the GNU Scientific
+Library (GSL). The reviewed upstream version is GNU GSL 2.8:
+https://ftp.gnu.org/gnu/gsl/gsl-2.8.tar.gz
+
+Retain the upstream copyright and license notices in:
+  crates/xt-laipath/NOTICE
+  crates/xt-laipath/GSL-COPYRIGHTS.txt
+  crates/xt-laipath/COPYING
+
+The runtime distribution includes copies under licenses/xt-laipath/.
+Other third-party dependencies retain their respective licenses and notices.
+The project license does not replace those notices or the terms applicable
+to NASA ATL03/ATL08 and MODIS landcover data, including cropped test fixtures.
